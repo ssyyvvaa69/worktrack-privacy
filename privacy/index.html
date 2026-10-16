@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="WorkTrack Privacy Policy — Miia Forge">
-<title>WorkTrack Privacy Policy | Miia Forge</title>
+<meta name="description" content="WorkTrack Privacy Policy — MIIA Forge">
+<link rel="canonical" href="https://miiaforge.pl/privacy/">
+<title>WorkTrack Privacy Policy | MIIA Forge</title>
 
 <style>
 :root { color-scheme: light; }
@@ -93,7 +94,7 @@ footer {
 
 <header>
 <nav>
-    <div class="brand">Miia Forge</div>
+    <div class="brand">MIIA Forge</div>
     <a href="/">Home</a>
 </nav>
 </header>
@@ -102,301 +103,131 @@ footer {
 
 <h1>WorkTrack Privacy Policy</h1>
 
-<p class="meta">Last updated: October 12, 2026</p>
-
-<p>
-Developer: Miia Forge<br>
-Privacy contact:
-<a href="mailto:miiaforge.dev@gmail.com">miiaforge.dev@gmail.com</a>
-</p>
-
-
-<h2>1. General information</h2>
-
-<p>
-This policy describes WorkTrack 1.0, an Android application for personal
-tracking of working time, earnings, vacation, holidays, statistics and notes.
-WorkTrack does not require a WorkTrack account and primarily stores user data
-locally on the device.
-</p>
-
-<p>
-Optional Google Drive backup, official holiday requests, Android system backup
-and user-initiated file transfers are explained below.
-</p>
-
-
-<h2>2. Data used by WorkTrack</h2>
-
-<p>
-WorkTrack uses work dates and hours, hourly rates, segments and multipliers,
-vacation entries, goals, notes and custom holidays entered by the user.
-It calculates earnings and statistics from these records.
-</p>
-
-<p>
-The application also uses settings including language, interface preferences,
-currency, holiday calendar and user-selected background images.
-These data support application functions and are not used for advertising
-profiling.
-</p>
-
-<p>
-WorkTrack does not request GPS or location permissions.
-Region-related choices use the system locale and application settings,
-not GPS location.
-</p>
-
-
-<h2>3. Local storage and Android system backup</h2>
-
-<p>
-Work records, goals and custom holidays are stored in an internal application
-database. Settings and processed background images are stored in application
-storage.
-</p>
-
-<p>
-WorkTrack does not send work records, rates, earnings, notes, custom holidays
-or photographs to a Miia Forge server.
-</p>
-
-<p>
-Local data remains until deleted by the user, replaced during restoration,
-or removed by clearing application data.
-</p>
-
-<p>
-Android system backup is enabled
-(<code>android:allowBackup=true</code>).
-Depending on the device, Google account and Android settings, the operating
-system may automatically back up or transfer eligible application data.
-This is an Android system function and is separate from WorkTrack's optional
-Google Drive backup.
-</p>
-
-
-<h2>4. Google Drive backup</h2>
-
-<p>
-Google Drive backup is optional.
-When the user enables or uses this feature, WorkTrack uses Google
-authentication and the Google Drive API.
-</p>
-
-<p>
-WorkTrack requests the Google Drive application-data permission:
-</p>
-
-<p>
-<code>https://www.googleapis.com/auth/drive.appdata</code>
-</p>
-
-<p>
-This permission allows WorkTrack to create and manage its own backup files
-inside Google Drive's hidden application data area
-(<code>appDataFolder</code>).
-</p>
-
-<p>
-It does not give WorkTrack access to the user's ordinary Google Drive files,
-documents or folders.
-</p>
-
-<p>
-Depending on the backup settings selected by the user, WorkTrack may create,
-list, restore and delete WorkTrack backup files in this application-specific
-storage area.
-</p>
-
-<p>
-Backup archives may contain application data and settings required to restore
-WorkTrack, including work records, notes, custom holidays, goals and other
-supported application data.
-</p>
-
-<p>
-These backup files are transferred directly between WorkTrack and the user's
-Google Drive account through Google services.
-Miia Forge does not receive or store a separate server copy of these backups.
-</p>
-
-<p>
-Google processes authentication and Google Drive requests according to
-Google's own privacy policies and terms.
-</p>
-
-<p>
-Disabling Google Drive backup stops future backup operations initiated by
-WorkTrack. Existing backups may remain in the application's Google Drive data
-area until they are deleted using the application's backup controls, applicable
-Google account controls, or otherwise removed by Google according to its
-policies.
-</p>
-
-
-<h2>5. Manual export, sharing and restoration</h2>
-
-<p>
-The user may initiate local backups, exports and sharing.
-Backups may contain work records, notes, custom holidays, goals, settings and
-other supported application data.
-</p>
-
-<p>
-CSV and XLSX exports contain records and calculated information for the
-selected scope, including notes where applicable.
-</p>
-
-<p>
-Android's document picker, CreateDocument interface and Sharesheet allow the
-user to choose a storage destination or receiving application.
-The selected destination may be a third-party or cloud service.
-</p>
-
-<p>
-Backup, CSV and XLSX files may contain personal or financial information and
-are not additionally encrypted by WorkTrack.
-After a file is transferred to a user-selected destination, WorkTrack does not
-control that service's storage, retention or deletion practices.
-</p>
-
-
-<h2>6. Selected files and background images</h2>
-
-<p>
-Android Photo Picker and file picker flows give WorkTrack access only to files
-selected by the user.
-WorkTrack does not request unrestricted access to the user's photo library or
-device storage.
-</p>
-
-<p>
-When a background image is selected, WorkTrack stores a processed local copy
-for display.
-The image is not sent to Miia Forge.
-It may be included in a backup created by the user or by an enabled WorkTrack
-backup feature where supported.
-</p>
-
-
-<h2>7. Internet, official holidays and notifications</h2>
-
-<p>
-For official public holidays, WorkTrack uses the external Nager.Holidays HTTPS
-API at nagerholidays.com.
-Requests include the selected holiday country code, year and standard technical
-HTTPS request information.
-</p>
-
-<p>
-The external server technically receives the device's public-facing IP address.
-Work records, rates, earnings, notes, custom holiday titles and background
-images are not included in these holiday requests.
-</p>
-
-<p>
-The official holiday calendar is enabled by default.
-Requests may run automatically, including in the background for official
-holiday reminders.
-Results are cached locally.
-Users can disable the official holiday calendar in WorkTrack settings.
-</p>
-
-<p>
-Notifications are local reminders scheduled using Android WorkManager,
-not Firebase Cloud Messaging.
-On supported Android versions, notification permission is requested.
-</p>
-
-
-<h2>8. Advertising, analytics and third-party services</h2>
-
-<p>
-WorkTrack 1.0 contains no advertising.
-</p>
-
-<p>
-It does not use Firebase Analytics, Google Analytics, AdMob,
-Advertising ID, advertising SDKs, Crashlytics, Sentry or tracking SDKs.
-It does not use Firebase Cloud Messaging.
-</p>
-
-<p>
-Google Drive backup, the external holiday API, Android system backup and
-user-selected sharing or storage services are functional integrations rather
-than advertising or analytics integrations.
-</p>
-
-
-<h2>9. Security, retention and control of data</h2>
-
-<p>
-WorkTrack uses Android internal application storage.
-Network connections to supported online services use HTTPS.
-</p>
-
-<p>
-Exported files are not additionally encrypted by WorkTrack and absolute
-security cannot be guaranteed.
-Users should protect their device, Google account and exported backup files.
-</p>
-
-<p>
-Records can be edited and deleted inside WorkTrack.
-All local application data can also be cleared through Android settings.
-</p>
-
-<p>
-Copies stored in Google Drive application data, Android system backup or
-user-selected external storage must be managed separately through the relevant
-feature, service or account settings.
-</p>
-
-<p>
-Where applicable data-protection laws provide such rights, users may have
-rights including access, correction, erasure, restriction, portability,
-objection and the right to lodge a complaint with a supervisory authority.
-</p>
-
-<p>
-Because WorkTrack does not upload work records to a Miia Forge server,
-Miia Forge does not hold a separate server copy of those records to retrieve
-or delete.
-</p>
-
-
-<h2>10. Policy updates</h2>
-
-<p>
-This policy may be updated when WorkTrack functionality or data-processing
-practices change.
-The date at the top of this document identifies the current revision.
-</p>
-
-<p>
-New processing and any required consent mechanisms will be described before
-such processing is introduced.
-</p>
-
-
-<h2>11. Contact information</h2>
-
-<p>
-Developer: Miia Forge<br>
-Email:
-<a href="mailto:miiaforge.dev@gmail.com">miiaforge.dev@gmail.com</a>
-</p>
-
-<p>
-Do not send passwords, signing keys or unnecessary sensitive information when
-contacting us.
-</p>
+<p class="meta">Last updated: 16 October 2026</p>
+
+<p>Developer: MIIA Forge<br>
+Privacy contact: <a href="mailto:miiaforge.dev@gmail.com">miiaforge.dev@gmail.com</a><br>
+Application: WorkTrack (Android package: com.miiaforge.worktrack)</p>
+
+<h2>1. Scope and overview</h2>
+
+<p>WorkTrack helps you record working time, earnings, vacation, sick leave, holidays and notes, and view related statistics. No WorkTrack account is required for these core functions. Your work records and settings are primarily stored on your device. Optional Google Drive backup uses your Google account; purchases and updates use Google Play.</p>
+
+<p>WorkTrack displays Google AdMob banner advertisements unless an eligible Remove Ads purchase is confirmed. Advertising, consent management, update configuration and other online functions involve the third parties described below. Local storage does not mean that the application or its SDKs never communicate with online services.</p>
+
+<p>MIIA Forge does not operate a server that receives your work records, rates, earnings, notes, custom holidays or background photographs. Those contents are not supplied by WorkTrack to advertising services. If you email us, we receive the information you choose to include so that we can respond to your enquiry. Please do not send unnecessary financial or other sensitive information.</p>
+
+<h2>2. Work records, settings and selected files</h2>
+
+<p>WorkTrack processes dates, working hours, rates, salary settings, work segments, coefficients, bonuses, vacation and sick-leave entries, goals, notes and custom holidays that you enter. It uses these records to perform calculations and present the features you request. It also stores preferences such as language, currency, interface, calendar colours, holiday country, reminders and backup settings.</p>
+
+<p>Records are stored in the application's internal database, and settings in application storage. When you choose a background image, WorkTrack stores a processed local copy. Android's photo and document pickers provide access to selected files; WorkTrack does not request unrestricted access to your photo library or device storage.</p>
+
+<p>WorkTrack does not request GPS or other Android location permissions. Calendar-country choices come from locale and application settings, not GPS. Separately, Google's advertising services may estimate approximate location from an IP address as explained in section 5.</p>
+
+<h2>3. Local retention and Android system backup</h2>
+
+<p>Local records remain until you delete them, replace them during restoration, clear application data or uninstall the application. Settings and cached technical data are retained as needed for the corresponding features. Copies that have already been backed up or exported are not deleted by deleting the local originals.</p>
+
+<p>Android system backup and device transfer are enabled for eligible application data, subject to Android, device and account settings. This operating-system mechanism is separate from WorkTrack's Google Drive backup. WorkTrack's backup rules exclude the financial/settings DataStore file, work_journal_settings.preferences_pb, from Android cloud backup and device transfer. Other eligible data, such as database records, may still be included. Processed background images are stored in Android's no-backup directory, but supported images may be included in a WorkTrack backup.</p>
+
+<p>Manage Android system backup through the applicable device and account controls. MIIA Forge does not receive a copy of Android system backups.</p>
+
+<h2>4. Optional Google Drive backup, export and restoration</h2>
+
+<p>When you connect Google Drive backup, WorkTrack uses Google account selection and authorization. It requests only the Drive application-data scope, https://www.googleapis.com/auth/drive.appdata, for its Drive integration. This permits creating, listing, downloading/restoring and deleting WorkTrack backups in the hidden appDataFolder area. It does not grant access to your ordinary Drive documents or folders.</p>
+
+<p>WorkTrack keeps the selected backup account identifier locally to reconnect and run authorized backup operations. Access tokens are held in memory for authorized requests. Google handles account authentication and authorization. You can choose manual backup or enable scheduled automatic backup; automatic backup can transfer supported application data in the background according to your settings. Disabling automatic backup stops future scheduled backups, but does not delete existing copies or revoke the Google permission by itself.</p>
+
+<p>Backup archives can contain work records, financial settings, hours, rates, earnings-related records, notes, goals, bonuses, custom holidays, preferences and supported background images needed to restore the application. They travel directly between your device and your Google Drive account via Google services. MIIA Forge does not receive or store a separate server copy. Cloud connection state is not a transferable authorization, and access tokens are not included in WorkTrack backups.</p>
+
+<p>Use WorkTrack's Google Drive backup list to manage or delete its backup files. You may also manage the application's hidden Drive data through Drive's app-management controls where available, and revoke access in your Google account's third-party connections. Revoking access or disabling backup does not necessarily delete stored backups. Google controls storage and retention within its services.</p>
+
+<p>You may also create local backups, export CSV/XLSX data and share files using Android's document picker and Sharesheet. Exports can contain records, calculated financial information and notes for the selected scope. The receiving app or storage service is the one you select. Temporary sharing files may remain in the application cache. Restoration loads the selected backup and replaces the applicable local data after confirmation.</p>
+
+<p>WorkTrack backup and export files are not additionally encrypted by WorkTrack. Protect these files and the accounts or storage destinations you select. Deleting local data does not delete external backups or exports; manage those copies separately.</p>
+
+<h2>5. Google AdMob banner advertising</h2>
+
+<p>WorkTrack uses Google Mobile Ads SDK to display banner ads. Depending on the ad configuration, available permissions and your privacy choices, Google and its advertising services may process IP addresses (including an approximate location inferred from IP), device/account identifiers such as the Android advertising ID when permitted, app/ad interactions, and diagnostic and performance information. These support advertising delivery and measurement, security and fraud prevention.</p>
+
+<p>This processing occurs through Google's services; it does not mean MIIA Forge independently receives or stores every such identifier or technical record. Advertising is separate from your locally entered hours, salary, notes and other work records. Google determines retention for data it processes under its policies and applicable service arrangements.</p>
+
+<h2>6. Advertising consent and Privacy Options</h2>
+
+<p>WorkTrack uses Google's User Messaging Platform (UMP) to obtain and manage advertising privacy choices where required. It requests current consent information and displays the required consent form when applicable. Ad requests are gated by UMP's permission to request ads. Your choices affect permitted data processing and ad personalization; declining personalization does not necessarily remove all ads or all technical processing needed for allowed ads.</p>
+
+<p>When UMP requires a Privacy Options entry point, WorkTrack makes advertising privacy settings available in Settings. Use it to review or change the choices offered, including withdrawing consent where that option applies. Availability and the form shown depend on Google's consent configuration and applicable requirements. Android/Google advertising-ID controls also let you reset or delete the advertising ID where supported.</p>
+
+<h2>7. Google Play purchase: Remove Ads</h2>
+
+<p>WorkTrack offers a one-time, non-consumable Remove Ads purchase (product ID: remove_ads). It is not a subscription. Google Play handles the payment. WorkTrack and MIIA Forge do not receive or store your payment-card details.</p>
+
+<p>The application receives the product and purchase information needed to determine the purchase status and entitlement, including a purchase token and acknowledgement status, and acknowledges eligible purchases with Google Play. It queries Google Play to restore or refresh that entitlement. It does not operate a separate MIIA Forge purchase database or put the entitlement into WorkTrack backups.</p>
+
+<p>After a confirmed purchase grants the Remove Ads entitlement, WorkTrack disables its advertising banners. Pending purchases do not grant the entitlement until confirmed. Removing banners does not disable unrelated functions such as Google Drive backup, Google Play purchase checks or update checks. Google Play's policies govern payment records, purchase management and refunds.</p>
+
+<h2>8. Firebase Remote Config and Google Play updates</h2>
+
+<p>WorkTrack uses Firebase Remote Config to retrieve configuration governing whether an update message should be offered and its target application version. The Remote Config service uses Firebase installation identifiers and technical app/device request information to return configuration. These requests are not uploads of your work records or financial entries. Configuration may be cached locally. Firebase's privacy and retention practices apply to data processed by that service.</p>
+
+<p>WorkTrack does not integrate the Firebase Analytics SDK, Firebase Crashlytics or Firebase Cloud Messaging. Firebase Remote Config and its supporting components are distinct from those products. Advertising measurement by Google Mobile Ads, described above, is separate from Firebase Analytics.</p>
+
+<p>Google Play's flexible In-App Updates feature checks update availability and manages downloads and installation through Google Play. Google processes the technical and store information needed for those operations under its policies. WorkTrack does not send your work records with update checks.</p>
+
+<h2>9. Official holidays and local notifications</h2>
+
+<p>Official public holidays come from the Nager.Holidays HTTPS API at nagerholidays.com. Requests contain the selected country code, year and ordinary technical connection information, including the public-facing IP address received by the provider. They do not include your work records, earnings, notes, custom holiday titles or background images. Responses are cached locally. The provider controls its technical logs and retention.</p>
+
+<p>The official holiday calendar is enabled by default and may make automatic requests, including in the background for reminders. You can disable it in holiday settings. Holiday country is a calendar preference and does not identify your physical location.</p>
+
+<p>Reminders use Android WorkManager and local Android notifications, not Firebase Cloud Messaging. Notification permission is requested on supported Android versions. Reminder content, such as holiday or note titles, may appear on your lock screen depending on your device settings. You can control reminders in WorkTrack and notification visibility in Android.</p>
+
+<h2>10. Third-party services and official information</h2>
+
+<p>The following services have their own policies and terms for information they process:</p>
+
+<ul>
+<li><a href="https://policies.google.com/privacy">Google Privacy Policy</a> — Google services, including account and device information.</li>
+<li><a href="https://policies.google.com/technologies/ads">Google advertising privacy information</a> and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">AdMob SDK data disclosures</a> — Google Mobile Ads/AdMob.</li>
+<li><a href="https://developers.google.com/admob/android/privacy">Google UMP privacy choices</a> — consent and Privacy Options.</li>
+<li><a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a> and <a href="https://developers.google.com/android/guides/overview">Google Play services information</a> — Play purchases, updates and supporting Google Play services; the Google Privacy Policy also applies.</li>
+<li><a href="https://www.google.com/drive/terms-of-service/">Google Drive Terms of Service</a> and <a href="https://developers.google.com/workspace/drive/api/guides/appdata">Drive application-data information</a> — optional cloud backups; see also the Google Privacy Policy.</li>
+<li><a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a> — Remote Config and Firebase installations.</li>
+<li><a href="https://nagerholidays.com/">Nager.Holidays</a> — the external official-holiday service.</li>
+</ul>
+
+<p>Opening a web policy or an external link makes a request to that site's hosting service. Its handling of connection data is governed by its own practices. MIIA Forge does not set Google's or the holiday provider's retention periods.</p>
+
+<h2>11. Security</h2>
+
+<p>WorkTrack uses Android internal application storage, and connections to the supported online services use HTTPS/TLS. Google services apply their own security controls and policies. Exported archives are not protected by additional WorkTrack encryption. No storage or transmission method can guarantee absolute security. Protect your device, Google account and backup/export files, and share only with destinations you trust.</p>
+
+<h2>12. Your choices and data-protection rights</h2>
+
+<p>You can edit or delete work records and notes in WorkTrack, use its Delete all data function for local application data, or clear application storage in Android. External backups and exports must be deleted separately. A Google Play purchase is managed by Google Play and is not erased or cancelled by deleting local records.</p>
+
+<p>You can review advertising choices through Privacy Options when available, manage your advertising ID in Android/Google settings, disable automatic Drive backups, delete WorkTrack backups, revoke Google authorization, choose whether to export files, and adjust holiday requests and reminders through the controls described above.</p>
+
+<p>Where applicable law provides them, you may have rights to access, correct, erase or port personal data, restrict or object to processing, withdraw consent, and complain to a data-protection authority. Contact miiaforge.dev@gmail.com with privacy questions about WorkTrack. MIIA Forge does not hold a server copy of your local work database to retrieve or delete. Requests relating to information held by Google may also need to be made using Google's account/privacy controls or to Google directly. Withdrawing consent does not affect processing lawfully carried out before withdrawal.</p>
+
+<h2>13. Children and privacy enquiries</h2>
+
+<p>WorkTrack does not ask you to enter your age or date of birth. If you are a parent or guardian and have concerns about a child's information in connection with WorkTrack, contact miiaforge.dev@gmail.com. We will review the concern and explain the available local-data and third-party privacy controls. This policy does not set or change the application's Google Play age rating or target-audience declaration.</p>
+
+<h2>14. Changes and contact</h2>
+
+<p>We may update this policy when WorkTrack's functionality or data-processing practices change. The date above identifies this revision. This web policy is published at https://miiaforge.pl/privacy/.</p>
+
+<p>Developer: MIIA Forge<br>
+Email: <a href="mailto:miiaforge.dev@gmail.com">miiaforge.dev@gmail.com</a></p>
+
+<p>Do not send passwords, access tokens, payment-card details, signing keys or unnecessary sensitive information when contacting us.</p>
 
 </main>
 
 <footer>
-© 2026 Miia Forge
+© 2026 MIIA Forge
 </footer>
 
 </body>
