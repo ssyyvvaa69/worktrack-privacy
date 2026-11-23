@@ -103,7 +103,7 @@ footer {
 
 <h1>WorkTrack Privacy Policy</h1>
 
-<p class="meta">Last updated: 16 October 2026</p>
+<p class="meta">Last updated: 23 November 2026</p>
 
 <p>Developer: MIIA Forge<br>
 Privacy contact: <a href="mailto:miiaforge.dev@gmail.com">miiaforge.dev@gmail.com</a><br>
@@ -113,7 +113,7 @@ Application: WorkTrack (Android package: com.miiaforge.worktrack)</p>
 
 <p>WorkTrack helps you record working time, earnings, vacation, sick leave, holidays and notes, and view related statistics. No WorkTrack account is required for these core functions. Your work records and settings are primarily stored on your device. Optional Google Drive backup uses your Google account; purchases and updates use Google Play.</p>
 
-<p>WorkTrack displays Google AdMob banner advertisements unless an eligible Remove Ads purchase is confirmed. Advertising, consent management, update configuration and other online functions involve the third parties described below. Local storage does not mean that the application or its SDKs never communicate with online services.</p>
+<p>WorkTrack displays Google AdMob banner advertisements unless an eligible Remove Ads purchase or active Premium subscription is confirmed. Advertising, consent management, update configuration and other online functions involve the third parties described below. Local storage does not mean that the application or its SDKs never communicate with online services.</p>
 
 <p>MIIA Forge does not operate a server that receives your work records, rates, earnings, notes, custom holidays or background photographs. Those contents are not supplied by WorkTrack to advertising services. If you email us, we receive the information you choose to include so that we can respond to your enquiry. Please do not send unnecessary financial or other sensitive information.</p>
 
@@ -123,7 +123,10 @@ Application: WorkTrack (Android package: com.miiaforge.worktrack)</p>
 
 <p>Records are stored in the application's internal database, and settings in application storage. When you choose a background image, WorkTrack stores a processed local copy. Android's photo and document pickers provide access to selected files; WorkTrack does not request unrestricted access to your photo library or device storage.</p>
 
-<p>WorkTrack does not request GPS or other Android location permissions. Calendar-country choices come from locale and application settings, not GPS. Separately, Google's advertising services may estimate approximate location from an IP address as explained in section 5.</p>
+<p>WorkTrack uses precise location for automatic working-time tracking. Keep device location on and allow precise location. Android 10+ also requires background location access (“Allow all the time”).</p>
+<p>Google Play services processes your work-zone coordinates and configured radius to detect entry, dwelling and exit. Address setup and the initial presence check can request your current location once. Address search and reverse geocoding of your current coordinates use Android Geocoder when available. Depending on the Android device and geocoding provider, the address query or precise coordinates may be sent to a network geocoding service. That provider handles the request under its own terms and privacy practices; this processing is not guaranteed to remain on the device. Your work address, work-zone coordinates, geofence events (ENTER, DWELL and EXIT) and visit history are stored locally; WorkTrack does not continuously track routes or build a coordinate-based route history.</p>
+<p>WorkTrack calculates hours using your shifts, saves them to the calendar and asks for clarification when needed. Android, Google Play services and background restrictions can delay events. You can turn automatic tracking off in WorkTrack's automatic working-time settings at any time.</p>
+<p>WorkTrack backup archives include visit history, tracking sessions and geofence event metadata, but the current archive format does not include the configured work-zone address, centre coordinates or radius. The local GPS configuration and history file is stored in Android's no-backup directory and is excluded from Android system backup. Calendar entries created from GPS tracking remain ordinary calendar records and may be eligible for system backup. WorkTrack does not send GPS coordinates to a MIIA Forge server. If you enable Google Drive backup, it is also included in the backup sent to your Drive account. You can manage or delete those backups separately.</p>
 
 <h2>3. Local retention and Android system backup</h2>
 
@@ -159,13 +162,13 @@ Application: WorkTrack (Android package: com.miiaforge.worktrack)</p>
 
 <p>When UMP requires a Privacy Options entry point, WorkTrack makes advertising privacy settings available in Settings. Use it to review or change the choices offered, including withdrawing consent where that option applies. Availability and the form shown depend on Google's consent configuration and applicable requirements. Android/Google advertising-ID controls also let you reset or delete the advertising ID where supported.</p>
 
-<h2>7. Google Play purchase: Remove Ads</h2>
+<h2>7. Google Play purchases: Remove Ads and Premium</h2>
 
-<p>WorkTrack offers a one-time, non-consumable Remove Ads purchase (product ID: remove_ads). It is not a subscription. Google Play handles the payment. WorkTrack and MIIA Forge do not receive or store your payment-card details.</p>
+<p>WorkTrack offers a one-time, non-consumable Remove Ads purchase (product ID: remove_ads). This one-time product is separate from the optional WorkTrack Premium subscription (worktrack_premium), which has monthly and yearly plans. Eligible accounts may be offered a seven-day trial followed by a paid monthly renewal; eligibility and localized prices come from Google Play. Google Play handles the payment. WorkTrack and MIIA Forge do not receive or store your payment-card details.</p>
 
 <p>The application receives the product and purchase information needed to determine the purchase status and entitlement, including a purchase token and acknowledgement status, and acknowledges eligible purchases with Google Play. It queries Google Play to restore or refresh that entitlement. It does not operate a separate MIIA Forge purchase database or put the entitlement into WorkTrack backups.</p>
 
-<p>After a confirmed purchase grants the Remove Ads entitlement, WorkTrack disables its advertising banners. Pending purchases do not grant the entitlement until confirmed. Removing banners does not disable unrelated functions such as Google Drive backup, Google Play purchase checks or update checks. Google Play's policies govern payment records, purchase management and refunds.</p>
+<p>After a confirmed purchase grants the Remove Ads entitlement, WorkTrack disables its advertising banners. Pending purchases do not grant the entitlement until confirmed. Removing banners does not by itself prevent initialization of the Google Mobile Ads SDK after the applicable consent checks. Removing banners does not disable unrelated functions such as Google Drive backup, Google Play purchase checks or update checks. Google Play's policies govern payment records, purchase management and refunds.</p>
 
 <h2>8. Firebase Remote Config and Google Play updates</h2>
 
